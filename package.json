@@ -1,7 +1,7 @@
 {
   "name": "request-republish-package",
   "version": "1.0.0",
-  "description": "GitHub action which uploads a package as a GitHub Artifact, then requests that a workflow in another repository republishes the package as a GitHub Package.",
+  "description": "GitHub action which uploads a package as a GitHub Artifact, then logs a particular message which is observed by a workflow in another repo which will pick up the artifact and republish it.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
