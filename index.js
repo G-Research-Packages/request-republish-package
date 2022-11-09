@@ -13,6 +13,11 @@ const glob = require('glob-promise');
         const packagePathGlobs = await glob(packagePathPattern);
         if (packagePathGlobs.length == 0) {
             core.setFailed('Couldn\'t find a file matching ' + packagePathPattern + ' (did try glob expansion)');
+            files = fs.readdir('.');
+            console.log("\nCurrent directory filenames:");
+            files.forEach(file => {
+                console.log(file);
+            })
             return;
         }
         if (packagePathGlobs.length > 1) {
